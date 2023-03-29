@@ -8,33 +8,19 @@ public class Main {
 
 		Scanner read = new Scanner(System.in);
 
-		int a = 0, b = 1, c = 0;
+		System.out.println("digite uma palavra:");
+		String str = read.nextLine();
 
-		System.out.println("Digite um valor: ");
-		int n = read.nextInt();
+		int x = str.length();
+		char[] n = new char[x];
 
-		for (int i = 0; i < n; i++) {
-
-			a = a + b;
-			b = a - b;
-
-			System.out.println(a);
-			if (a == n) {
-				c = a;
-				break;
-			} else if (a > n) {
-				break;
-			}
+		for (int i = 0; i < x; i++) {
+			n[x - i - 1] = str.charAt(i);
 
 		}
 
-		System.out.println();
-		if (c > 0) {
-			System.out.println(n + " Se encontra na sequência de fibonacci!");
-		} else {
-			System.out.println(n + " Não se encontra na sequência de fibonacci!");
-
-		}
+		String str2 = String.copyValueOf(n);
+		System.out.println(str2);
 
 	}
 }
