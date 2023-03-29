@@ -4,20 +4,37 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String args[]) {
 
 		Scanner read = new Scanner(System.in);
 
-		final int INDICE = 13;
-		int soma = 0, k = 0;
+		int a = 0, b = 1, c = 0;
 
-		for (int i = k; i < INDICE; i++) {
+		System.out.println("Digite um valor: ");
+		int n = read.nextInt();
 
-			k++;
-			soma += k;
+		for (int i = 0; i < n; i++) {
+
+			a = a + b;
+			b = a - b;
+
+			System.out.println(a);
+			if (a == n) {
+				c = a;
+				break;
+			} else if (a > n) {
+				break;
+			}
+
 		}
-		System.out.println("Resultado da Soma: " + soma);
+
+		System.out.println();
+		if (c > 0) {
+			System.out.println(n + " Se encontra na sequência de fibonacci!");
+		} else {
+			System.out.println(n + " Não se encontra na sequência de fibonacci!");
+
+		}
 
 	}
-
 }
